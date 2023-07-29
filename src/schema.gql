@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type PersonDto {
+  _id: String!
+  index: Int!
+  guid: String!
+  isActive: Boolean!
+  balance: String!
+  picture: String!
+  age: Int!
+  eyeColor: String!
+  name: String!
+  gender: String!
+  company: String!
+  email: String!
+  phone: String!
+  about: String!
+  registered: String!
+  latitude: Float!
+  longitude: Float!
+  tags: [String!]!
+  friends: [FriendDto!]!
+  greeting: String!
+  favoriteFruit: String!
+  address: String
+}
+
+type FriendDto {
+  id: Int!
+  name: String!
+}
+
+type Query {
+  getAllPersonsWithAddress: [PersonDto!]!
+  getAllPersonsInRange: [PersonDto!]!
+  getAllPersonsToSendEmail: [PersonDto!]!
+  getInvalidEmails: [String!]!
+  getEmailsWithoutPerson: [String!]!
+}
